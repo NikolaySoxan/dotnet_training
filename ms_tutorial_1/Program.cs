@@ -7,7 +7,7 @@ namespace C__1._1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-             Console.WriteLine("The current time is " + DateTime.Now);
+            Console.WriteLine("The current time is " + DateTime.Now);
         }
     }
 }
