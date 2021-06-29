@@ -1,27 +1,36 @@
 ﻿using System;
 
-namespace ms_tutorial_2
+namespace BubbleSort
 {
     class Program
     {
         static void Main(string[] args)
         {
-			String[] names = { "Eugene", "Katherina", "John", "Stephen", "Phil", "Joe", "Alex" };
-			int[] times = { 172, 169, 191, 202, 181, 191, 201 };
-			int max = times[0];
-			int index = 0;
-			for (int i = 0; i < times.Length; ++i) 
-			{
-				if (max < times[i])
-				{
-					max = times[i];
-					index = i;
-
-				}
-			}
-
-			Console.WriteLine("Name = {0} Height: {1}", names[index], max);
-			//while (true) { }
-		}   
+            // ввод чисел
+            int[] nums = {1,5,7,8,9,4,3};
+          
+            // сортировка
+            int temp;
+            for (int i = 0; i < nums.Length-1; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] > nums[j])
+                    {
+                        temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                    }
+                }
+            }
+             
+            // вывод
+            Console.WriteLine("Вывод отсортированного массива:");
+            for (int i = 0; i < nums.Length; i++)
+            {
+                Console.Write(nums[i]+"\t");
+            }
+            Console.ReadLine();
+        }
     }
 }
